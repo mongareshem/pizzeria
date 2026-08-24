@@ -1,6 +1,4 @@
 from django.db import models
-from django.db.models.fields import TextField
-
 
 class Pizza(models.Model):
     """The different kinds of pizzas."""
@@ -14,7 +12,7 @@ class Pizza(models.Model):
 class Topping(models.Model):
     """Specific toppings used."""
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
-    name = TextField()
+    name = models.TextField()
 
     def __str__(self):
         """Returns the specific toppings."""
