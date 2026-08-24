@@ -6,5 +6,8 @@ app_name = 'pizzas'
 
 urlpatterns = [
     # Home Page
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+
+    # Page that shows all pizzas.
+    path('pizzas/', views.pizzas, name='pizzas')
 ]
